@@ -106,7 +106,7 @@ df_mapa = (
 # MAPA COROPLÉTICO (SIN GEOPANDAS)
 # ------------------------------------------
 
-st.subheader(f"Mapa de delitos por localidad – {año_sel}")
+st.subheader(f"Mapa de delitos por localidad - {año_sel}")
 
 fig_mapa = px.choropleth_mapbox(
     df_mapa,
@@ -115,7 +115,7 @@ fig_mapa = px.choropleth_mapbox(
     featureidkey="properties.LOCNOMBRE",
     color="Valor",
     hover_name="Localidad",
-    mapbox_style="carto-positron",
+    mapbox_style="open-street-map",
     center={"lat": 4.65, "lon": -74.1},
     zoom=9,
     opacity=0.8,
